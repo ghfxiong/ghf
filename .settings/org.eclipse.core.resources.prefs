@@ -1,0 +1,21 @@
+#Fri Aug 28 10:09:00 CST 2015
+eclipse.preferences.version=1
+encoding//config/db.properties=UTF-8
+encoding//config/log4j.properties=UTF-8
+encoding//config/lucene.properties=UTF-8
+encoding//config/template/blogContent.bak.ftl=UTF-8
+encoding//config/template/index.ftl=UTF-8
+encoding//html/blog/content.jsp=UTF-8
+encoding//html/blog/default.jsp=UTF-8
+encoding//html/blog/home.jsp=UTF-8
+encoding//html/blog/index.jsp=UTF-8
+encoding//html/blog/init_page.jsp=UTF-8
+encoding//html/blog/slideData.js=UTF-8
+encoding//html/resoure/blog/slideData.js=UTF-8
+encoding//html/views/MyHome.jsp=UTF-8
+encoding//html/views/login.jsp=UTF-8
+encoding//src/com/ghf/core/dao/connections/SpringJdbcUtil.java=UTF-8
+encoding//src/com/ghf/core/dao/impl/DbDaoImpl.java=UTF-8
+encoding//src/com/iamghf/web/common/WebConstant.java=UTF-8
+encoding//src/com/iamghf/web/interceptor/MyInterceptor.java=UTF-8
+encoding//src/com/iamghf/wechat/common/FormatXmlProcess.java=UTF-8
