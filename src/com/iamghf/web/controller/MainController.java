@@ -68,7 +68,6 @@ public class MainController extends BaseController{
 		if(log.isDebugEnabled()){
 			log.debug("the request is : "+request.getRequestURL());
 		}
-				
 		String code = request.getParameter("method");
 		log.debug("method:"+code);
 		InterCfgBean bean = InterCfgCache.getCfgPage(code);
