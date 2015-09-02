@@ -358,7 +358,7 @@ public class BaseAction {
 	
 	
 	
-	public void qeruykfInfo(HttpServletRequest req, HttpServletResponse resp)throws Exception {
+	public String qeruykfInfo(HttpServletRequest req, HttpServletResponse resp)throws Exception {
         String cond = req.getParameter("cond")==null ?(String) req.getAttribute("cond"):req.getParameter("cond");
         String cond1 = URLDecoder.decode(cond, "UTF-8");
         if(StringUtils.isEmpty(cond1)){
@@ -391,11 +391,12 @@ public class BaseAction {
 			//.append(", \"MaxPage\": ").append("")
 			.append("}");
 		
-		PrintWriter out = resp.getWriter();
-		out.write(retStr.toString());
+		//PrintWriter out = resp.getWriter();
+		//out.write(retStr.toString());
+		return retStr.toString();
 	}
 	
-	public void qeruykfInfoCount(HttpServletRequest req, HttpServletResponse resp)throws Exception {
+	public String qeruykfInfoCount(HttpServletRequest req, HttpServletResponse resp)throws Exception {
 		String cond = req.getParameter("cond")==null ?(String) req.getAttribute("cond"):req.getParameter("cond");
         String cond1 = URLDecoder.decode(cond, "UTF-8");
         
@@ -428,11 +429,12 @@ public class BaseAction {
 			.append(", \"MaxPage\": ").append(maxPage)
 			.append("}");
 		
-		PrintWriter out = resp.getWriter();
-		out.write(retStr.toString());
+		//PrintWriter out = resp.getWriter();
+		//out.write(retStr.toString());
+		return retStr.toString();
 	}
 	
-public void queryMenu(HttpServletRequest req, HttpServletResponse resp)throws Exception {
+public String queryMenu(HttpServletRequest req, HttpServletResponse resp)throws Exception {
 		Map<String,InterCfgBean> map = InterCfgCache.getallData();
 		JSONArray list = new JSONArray();
 		String contextPaht = req.getContextPath();
@@ -459,14 +461,15 @@ public void queryMenu(HttpServletRequest req, HttpServletResponse resp)throws Ex
 			//.append(", \"MaxPage\": ").append(maxPage)
 			.append("}");
 		
-		PrintWriter out = resp.getWriter();
+		//PrintWriter out = resp.getWriter();
 		if(log.isDebugEnabled()){
 			log.debug(retStr);
 		}
-		out.write(retStr.toString());
+		//out.write(retStr.toString());
+		return retStr.toString();
 	}
 
-	public void initBlog(HttpServletRequest req, HttpServletResponse resp)throws Exception {
+	public String initBlog(HttpServletRequest req, HttpServletResponse resp)throws Exception {
 		String basePath = req.getContextPath();
 		/** 获取幻灯列表 */
 		JSONArray slides = new JSONArray();
@@ -488,7 +491,8 @@ public void queryMenu(HttpServletRequest req, HttpServletResponse resp)throws Ex
 			for(BCategory category : categorys){
 				JSONObject tag = new JSONObject();
 				tag.put("id", category.getId());
-				tag.put("url", basePath+"/jump?method=p_10001&tagid="+category.getId());
+				//tag.put("url", basePath+"/jump?method=p_10001&tagid="+category.getId());
+				tag.put("url", basePath+"/jump?method=p_10008&tagid="+category.getId());
 				tag.put("name", category.getName());
 				tags.put(tag);
 			}
@@ -505,11 +509,12 @@ public void queryMenu(HttpServletRequest req, HttpServletResponse resp)throws Ex
 			.append("\"slider\": ").append(slides.toString())
 			.append(", \"tags\": ").append(tags.toString())
 			.append("}");
-		PrintWriter out = resp.getWriter();
-		out.write(retStr.toString());
+		//PrintWriter out = resp.getWriter();
+		//out.write(retStr.toString());
+		return retStr.toString();
 	}
 	
-	public void initArticle(HttpServletRequest req, HttpServletResponse resp)throws Exception {
+	public String initArticle(HttpServletRequest req, HttpServletResponse resp)throws Exception {
 		String basePath = req.getContextPath();
 		
 		IBlogService bsv = new BlogServiceImpl();
@@ -602,11 +607,12 @@ public void queryMenu(HttpServletRequest req, HttpServletResponse resp)throws Ex
 			.append("\"article\": ").append(article.toString())
 			.append(", \"page\": ").append(pageNum)
 			.append("}");
-		PrintWriter out = resp.getWriter();
-		out.write(retStr.toString());
+		//PrintWriter out = resp.getWriter();
+		//out.write(retStr.toString());
+		return retStr.toString();
 	}
 	
-	public void qryArticle(HttpServletRequest req, HttpServletResponse resp)throws Exception {
+	public String qryArticle(HttpServletRequest req, HttpServletResponse resp)throws Exception {
         //String cond = req.getParameter("cond")==null ?(String) req.getAttribute("cond"):req.getParameter("cond");
         //String cond1 = URLDecoder.decode(cond, "UTF-8");
 		String basePath = req.getContextPath();
@@ -652,8 +658,9 @@ public void queryMenu(HttpServletRequest req, HttpServletResponse resp)throws Ex
 			//.append(", \"MaxPage\": ").append("")
 			.append("}");
 		
-		PrintWriter out = resp.getWriter();
-		out.write(retStr.toString());
+		//PrintWriter out = resp.getWriter();
+		//out.write(retStr.toString());
+		return retStr.toString();
 	}
 	
 	public static void main(String[] args)throws Exception{

@@ -124,6 +124,7 @@ function doInitArticle(data){
     </div>
   </div>
   </div>
+  <!-- 右边栏 -->
   <div class="r_box f_r">
     <div class="tit01">
       <h3>关注我</h3>
@@ -211,7 +212,7 @@ window.onload = function ()
   <!--r_box end --> 
 </article>
 <footer>
-  <p class="ft-copyright">ghf博客 Design by ghf 蜀ICP备11002373号-1</p>
+  <p class="ft-copyright">ghf博客 Design by ghf </p>
   <div id="tbox"> <a id="togbook" href="/"></a> <a id="gotop" href="javascript:void(0)"></a> </div>
 </footer>
 </body>
